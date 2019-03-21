@@ -1,17 +1,17 @@
 let polja = document.getElementsByTagName("li");
 let brojac = 0;
-
+let zavrsenaIgra = false;
 
 function myFunc(id){
-    if(document.getElementById(id).innerHTML === ""){
+    if(document.getElementById(id).innerHTML === "" && zavrsenaIgra == false){
         brojac++;
         if(brojac % 2 != 0){
             document.getElementById(id).innerHTML = "X";
         }else{
             document.getElementById(id).innerHTML = "O";
         }
-        if (provjeri()){
-            console.log("Zavrsena igra");//kako zavrsit igru
+        if (provjeri()){ //ako provjera vraca true zavrsi igru
+            zavrsenaIgra = true;
         };
     }
 
@@ -35,11 +35,12 @@ function provjeri(){
     }
 }
 
-function reset(){  
+function reset(){  //ako igrac zeli ponovo da pokrene igru
     for(let i = 0; i < polja.length; i++){
         polja[i].innerHTML = "";
     }
     brojac = 0;
+    zavrsenaIgra = false;
 }
 
 function zavrsiIgru(){
