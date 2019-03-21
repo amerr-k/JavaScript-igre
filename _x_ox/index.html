@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css_index.css">
+</head>
+<body>
+
+    <div class="container"
+            style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+            unselectable="on"
+            onselectstart="return false;" 
+            onmousedown="return false;">
+        <ul id="game">
+            <li id="polje_1" onclick="myFunc(this.id)" data-pos="0,0"></li>
+            <li id="polje_2" onclick="myFunc(this.id)" data-pos="0,1"></li>
+            <li id="polje_3" onclick="myFunc(this.id)" data-pos="0,2"></li>
+            <li id="polje_4" onclick="myFunc(this.id)" data-pos="1,0"></li>
+            <li id="polje_5" onclick="myFunc(this.id)" data-pos="1,1"></li>
+            <li id="polje_6" onclick="myFunc(this.id)" data-pos="1,2"></li>
+            <li id="polje_7" onclick="myFunc(this.id)" data-pos="2,0"></li>
+            <li id="polje_8" onclick="myFunc(this.id)" data-pos="2,1"></li>
+            <li id="polje_9" onclick="myFunc(this.id)" data-pos="2,2"></li>
+        </ul>
+        <button id="reset-game" onclick="reset()">Reset</button>
+    </div>
+
+    <script src="js_index.js"></script>
+</body>
+</html>
